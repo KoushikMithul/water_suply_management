@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Water Source</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div class="container">
     <h2>Edit Water Source</h2>
     
     <form method="POST" action="{{ url_for('edit_water_source', reservoir_id=water_source['reservoir_id']) }}">
@@ -26,5 +28,6 @@
     <!-- Back Button -->
     <br>
     <a href="{{ url_for('manage_water_sources') }}">Back to Water Sources Management</a>
+    </div>
 </body>
 </html>

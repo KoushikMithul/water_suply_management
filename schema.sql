@@ -87,11 +87,6 @@ CREATE TABLE Reports (
     date DATE
 );
 
--- Example indices for performance improvement on common queries
-CREATE INDEX idx_customer_sector ON Customer(sector_no);
-CREATE INDEX idx_locality_sector ON Locality(sector_no);
-CREATE INDEX idx_bills_customer ON Bills(customer_id);
-CREATE INDEX idx_reports_date ON Reports(date);
 
 -- Trigger to delete bills older than one year whenever a new bill is inserted
 CREATE TRIGGER delete_old_bills
